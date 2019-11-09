@@ -9,7 +9,8 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTES } from './app-routing.module';
 // import { AppRoutingModule } from './app-routing.module';
 
-
+//servicios
+import { SettingsService } from './services/settings.service';
 
 ///modulos
 import { PagesModule } from './pages/pages.module';
@@ -43,7 +44,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule
 
   ],
-  providers: [],
+  providers: [
+    SettingsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
