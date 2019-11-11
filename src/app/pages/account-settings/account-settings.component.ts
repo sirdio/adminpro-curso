@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { SettingsService } from '../../services/settings.service';
+import { SettingsService } from '../../services/service.index';
 
 
 
@@ -19,7 +19,7 @@ export class AccountSettingsComponent implements OnInit {
 
   cambiarColor(tema:string, link:any){
     this.aplicarCheck( link );
-    console.log(tema);
+    //console.log(tema);
     this._settings.aplicarTema(tema);
     
   }
