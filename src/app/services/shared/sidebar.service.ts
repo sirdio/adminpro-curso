@@ -13,6 +13,8 @@ menu:any = [
       {titulo:"Dashoard", url:"/dashboard"},
       {titulo:"ProgressBar", url:"/progress"},
       {titulo:"Graficas", url:"/graficas1"},
+      { titulo:"Promesas", url:"/promesas" },
+      { titulo:"Reactiv-js", url:"/rxjs" },
     ]
   }
 ];
