@@ -1,3 +1,10 @@
-#themecolors a {
+#themecolors a,
+.pointer {
     cursor: pointer;
 }
+
+
+/* 
+.pointer {
+    cursor: pointer;
+} */

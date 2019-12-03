@@ -23,7 +23,7 @@ import { RegisterComponent } from './login/register.component';
 
 
 //temporal
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     PagesModule,
     APP_ROUTES,
     FormsModule,
+    ReactiveFormsModule,
     ServiceModule
 
   ],
