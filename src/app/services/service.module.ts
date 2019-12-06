@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 // IMPORTA SERVICIOS DESDE UN ARCHIVO INDICE
-import { SettingsService, SharedService, SidebarService, UsuarioService, LoginGuardGuard } from "./service.index";
+import { SettingsService, SharedService, SidebarService, UsuarioService, LoginGuardGuard, SubirArchivoService } from "./service.index";
 
 
 
@@ -18,6 +18,7 @@ import { SettingsService, SharedService, SidebarService, UsuarioService, LoginGu
     SharedService,
     SidebarService,
     UsuarioService,
+    SubirArchivoService,
     LoginGuardGuard
   ]
 })
