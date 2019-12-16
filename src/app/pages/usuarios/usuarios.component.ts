@@ -29,16 +29,16 @@ export class UsuariosComponent implements OnInit {
 
   ngOnInit() {
     this.cargarUsuarios();
-    this._modalUploadService.notificacion
-          .subscribe((resp) => { 
+    this._modalUploadService.notificacion.subscribe((resp) => { 
+        // this.desde = 0;
+        // this.cargarUsuarios();
             if (this.bandera) {
               this.desde = 0;
               this.cargarUsuarios();
             } else {
               this.buscarUsuario( this.terminoBusqueda );
             }
-            console.log( this.bandera );
-           });
+    });
   }
 
   cargarUsuarios(){
@@ -93,7 +93,6 @@ export class UsuariosComponent implements OnInit {
   }
   
   mostrarBusqueda(){
-    
     let arrayUserTemp: Usuario[] = [];
     for (let index = this.desde; index < this.desde + 5; index++) {
       if (index < this.totalRegistros) {

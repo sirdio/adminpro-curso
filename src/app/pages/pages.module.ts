@@ -22,12 +22,15 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 
 
 // pipes Modulo
 import { PipesModule } from '../pipes/pipes.module';
-import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 
@@ -44,7 +47,10 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
        RxjsComponent,
        ProfileComponent,
        UsuariosComponent,
-       ModalUploadComponent
+       ModalUploadComponent,
+       HospitalesComponent,
+       MedicosComponent,
+       MedicoComponent
       ],
     exports: [
         PagesComponent,

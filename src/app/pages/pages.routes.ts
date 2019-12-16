@@ -1,5 +1,7 @@
 import {RouterModule, Routes } from "@angular/router";
 
+/// Guards
+import { LoginGuardGuard } from '../services/service.index';
 
 
 import { PagesComponent } from './pages.component';
@@ -11,10 +13,11 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 
-/// Guards
-import { LoginGuardGuard } from '../services/service.index';
 
 
 const pagesRoutes: Routes = [
@@ -32,6 +35,10 @@ const pagesRoutes: Routes = [
           { path:'perfil', component:ProfileComponent, data: { titulo: 'Perfil de usuario' } },
           // Mnatenimientos
           { path:'usuarios', component:UsuariosComponent, data: { titulo: 'Mantenimiento de usuario' } },
+          { path:'hospitales', component:HospitalesComponent, data: { titulo: 'Mantenimiento de Hospital' } },
+          { path:'medicos', component:MedicosComponent, data: { titulo: 'Mantenimiento de Médicos' } },
+          { path:'medico/:id', component:MedicoComponent, data: { titulo: 'Actualizar de Médicos' } },
+
           { path:'', redirectTo:'/dashboard', pathMatch: 'full' }
         ] 
       }
