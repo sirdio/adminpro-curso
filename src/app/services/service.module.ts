@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 // IMPORTA SERVICIOS DESDE UN ARCHIVO INDICE
-import { SettingsService, SharedService, SidebarService, UsuarioService, LoginGuardGuard, HospitalService, SubirArchivoService, MedicoService } from "./service.index";
+import { SettingsService, SharedService, SidebarService, UsuarioService, LoginGuardGuard, HospitalService, SubirArchivoService, MedicoService, AdminGuard } from "./service.index";
 import { ModalUploadService } from '../components/modal-upload/modal-upload.service';
+import {  } from './guards/admin.guard';
 
 
 
@@ -23,6 +24,7 @@ import { ModalUploadService } from '../components/modal-upload/modal-upload.serv
     MedicoService,
     SubirArchivoService,
     LoginGuardGuard,
+    AdminGuard,
     ModalUploadService
   ]
 })

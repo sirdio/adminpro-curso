@@ -107,7 +107,7 @@ export class UsuariosComponent implements OnInit {
   borrarUsuario( usuario: Usuario ){
 
     if (usuario._id === this._usuarioService.usuario._id) {
-      Swal.fire('No se puede borrar', 'Está intentando borrar se a si mismo.', 'error');
+      Swal.fire('No se puede borrar', 'Está intentando borrarse a si mismo.', 'error');
       return;
     }
     const swalWithBootstrapButtons = Swal.mixin({
