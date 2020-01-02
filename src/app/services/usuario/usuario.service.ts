@@ -33,6 +33,23 @@ export class UsuarioService {
       //console.log('Servico Usuario Listo.');
   }
 
+  renovarToken( ) {
+    let url = `${ URL_SERVICIOS }/login/renovartoken?token=${ this.token }`;
+    return this.http.post(url,'none').pipe(
+      map( (resp: any) => { 
+        this.token = resp.token;
+        localStorage.setItem('token', this.token);
+        console.log( 'Token Renovado' );
+        return true;
+       } ),
+       catchError( ( err: any ) => { 
+         this.router.navigate(['/login']);
+         Swal.fire(`Error: token invalido`, 'Falla al intentar renovar token.', 'error' );
+         return new Observable<any>( );
+       })
+    );
+  }
+
   logout(){
     this.token = '';
     this.usuario = null;
@@ -69,7 +86,7 @@ export class UsuarioService {
                 return true;
         }), 
         catchError( ( err: any ) => { 
-          Swal.fire(`Error: ${ err.status }`, 'Fala al intentar inicar sesión Email o Contraseña incorecta.', 'error' );
+          Swal.fire(`Error: ${ err.status }`, 'Falla al intentar inicar sesión Email o Contraseña incorecta.', 'error' );
           return new Observable<any>( );
         })
       );
